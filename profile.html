@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | AI Fraud Detection System</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Auth check
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "login.html";
+        }
+    </script>
+</head>
+<body class="page-fade">
+    <div class="app-container">
+        <!-- HEADER (Updated with Navigation) -->
+        <header class="top-bar">
+            <div class="header-left">
+                <div class="logo-container">
+                    <img src="assets/cyber_shield.png" alt="Logo" class="header-logo">
+                </div>
+                <div>
+                    <h1>AI Fraud Detection System</h1>
+                    <p class="subtitle">System Profile & Information</p>
+                </div>
+            </div>
+            <div class="header-right" style="display: flex; align-items: center; gap: 20px;">
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-btn">📊 Dashboard</a>
+                    <a href="profile.html" class="nav-btn active">👤 Profile</a>
+                </nav>
+                <button id="btn-logout-header" class="nav-btn btn-logout">🚪 Logout</button>
+            </div>
+        </header>
+
+        <main class="profile-grid">
+            <!-- USER INFO CARD -->
+            <section class="card">
+                <h2>User Information</h2>
+                <div class="info-item">
+                    <p class="info-label">Current User</p>
+                    <p class="info-value">Admin User</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Email Address</p>
+                    <p class="info-value">admin@fraudcortex.ai</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Access Level</p>
+                    <p class="info-value"><span class="badge badge-legit">System Administrator</span></p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Last Login</p>
+                    <p class="info-value">Today, 11:25 AM</p>
+                </div>
+            </section>
+
+            <!-- SYSTEM INFO CARD -->
+            <section class="card">
+                <h2>System Details</h2>
+                <div class="info-item">
+                    <p class="info-label">System Name</p>
+                    <p class="info-value" style="color: var(--accent-blue);">FraudCortex AI v2.4</p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Description</p>
+                    <p class="info-value" style="font-size: 0.95rem; font-weight: 400;">
+                        Hybrid ML + Behavioral + Explainable AI fraud detection system designed for high-throughput enterprise transactions.
+                    </p>
+                </div>
+                <div class="info-item">
+                    <p class="info-label">Backend Status</p>
+                    <div class="status-indicator">
+                        <span class="pulse-dot"></span>
+                        <span>Online & Optimizing</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FEATURES CARD -->
+            <section class="card">
+                <h2>Core Capabilities</h2>
+                <ul class="feature-list">
+                    <li><span class="feature-icon">✓</span> Real-time transaction scanning</li>
+                    <li><span class="feature-icon">✓</span> Deep behavioral profiling (Auto-Encoder)</li>
+                    <li><span class="feature-icon">✓</span> Geo-location anomaly detection</li>
+                    <li><span class="feature-icon">✓</span> Automated SMS & Email security alerts</li>
+                    <li><span class="feature-icon">✓</span> Explainable AI (SHAP-based feature analysis)</li>
+                </ul>
+            </section>
+
+            <!-- MODEL STATUS CARD -->
+            <section class="card">
+                <h2>AI Models</h2>
+                <div style="display: flex; gap: 20px;">
+                    <div style="flex: 1; padding: 15px; background: rgba(59, 130, 246, 0.1); border-radius: 10px; border: 1px solid rgba(59, 130, 246, 0.3);">
+                        <h3 style="font-size: 0.9rem; margin-bottom: 10px;">Random Forest</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Primary Classifier</p>
+                        <p style="font-size: 1.2rem; font-weight: 700; color: var(--accent-blue);">98.2% Acc</p>
+                    </div>
+                    <div style="flex: 1; padding: 15px; background: rgba(16, 185, 129, 0.1); border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.3);">
+                        <h3 style="font-size: 0.9rem; margin-bottom: 10px;">XGBoost</h3>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Secondary Verification</p>
+                        <p style="font-size: 1.2rem; font-weight: 700; color: var(--accent-green);">97.9% Acc</p>
+                    </div>
+                </div>
+                <div style="margin-top: 20px; font-size: 0.85rem; color: var(--text-muted);">
+                    <p>Models are retrained daily on anonymized transaction patterns to adapt to evolving fraud vectors.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
